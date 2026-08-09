@@ -60,6 +60,10 @@ function generateTopScorers(students) {
     return "Invalid";
   }
 
+  if (students.some((student) => !student.name || !student.score)) {
+    return "Invalid";
+  }
+
   const qualified = students.filter((student) => {
     return student.score > 60;
   });
@@ -79,4 +83,4 @@ console.log(
   ]),
 );
 console.log(generateTopScorers([]));
-console.log(generateTopScorers({ name: "Rafi" }));
+console.log(generateTopScorers([{ name: "Rafi" }]));
