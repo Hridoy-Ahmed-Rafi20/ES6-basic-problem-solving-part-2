@@ -72,7 +72,7 @@ function generateTopScorers(students) {
     return currentObj.name.toUpperCase();
   });
 
-  return names.slice(0, 2);
+  return names.slice(0, 3);
 }
 console.log(
   generateTopScorers([
